@@ -7,27 +7,27 @@ import java.util.List;
 
 public abstract class ScheduleModel {
 
-    abstract DataAccessObject getDao();
+    public abstract DataAccessObject getDao();
 
-    abstract void setDao(DataAccessObject dao);
+    public abstract void setDao(DataAccessObject dao);
 
-    void addTransport(Transport transport) {
+    public void addTransport(Transport transport) {
         getDao().addTransport(transport);
     }
 
-    void removeTransportById(Long id) {
+    public void removeTransportById(Long id) {
         getDao().removeTransportById(id);
     }
 
-    Transport findTransportById(Long id) throws NoSuchTransportException {
+    public Transport findTransportById(Long id) throws NoSuchTransportException {
         return getDao().findTransportById(id);
     }
 
-    void updateTransportById(Long id, Transport transport) {
+    public void updateTransportById(Long id, Transport transport) {
         getDao().updateTransportById(id, transport);
     }
 
-    List<Transport> findAllTransport() {
+    public List<Transport> findAllTransport() {
         return getDao().findAllTransports();
     }
 }
