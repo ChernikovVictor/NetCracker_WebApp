@@ -1,0 +1,11 @@
+# Project exclude paths
+/out/
+
+# Intellij project files
+.idea/
+
+# Maven
+target/
+
+# access to database
+src/main/resources/database.properties
